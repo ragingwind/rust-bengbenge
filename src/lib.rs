@@ -37,7 +37,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
+    fn it_returns_address_infinity() {
         let mut bb = BengBenge::new();
 
         bb.append("192.168.0.1".to_string());
@@ -53,5 +53,26 @@ mod tests {
         assert_eq!("192.168.0.2", bb.next().unwrap());
         assert_eq!("192.168.0.3", bb.next().unwrap());
         assert_eq!("192.168.0.4", bb.next().unwrap());
+    }
+
+    #[test]
+    fn it_loops_infinity() {
+        let mut bb = BengBenge::new();
+
+        bb.append("192.168.0.1".to_string());
+        bb.append("192.168.0.2".to_string());
+        bb.append("192.168.0.3".to_string());
+        bb.append("192.168.0.4".to_string());
+
+        let mut addreses = vec!["192.168.0.1", "192.168.0.2", "192.168.0.3", "192.168.0.4"];
+        addreses.reverse();
+
+        while let Some(address) = bb.next() {
+            assert_eq!(addreses.pop().unwrap(), address);
+
+            if addreses.len() == 0 {
+                break;
+            }
+        }
     }
 }
