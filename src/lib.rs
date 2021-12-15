@@ -1,6 +1,7 @@
 #![allow(dead_code)]
 
-struct BengBenge {
+#[cfg(not(has_std))]
+pub struct BengBenge {
     container: Vec<String>,
     cursor: usize,
 }
