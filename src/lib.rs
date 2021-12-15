@@ -7,14 +7,14 @@ pub struct BengBenge {
 }
 
 impl BengBenge {
-    fn new() -> BengBenge {
+    pub fn new() -> BengBenge {
         BengBenge {
             container: Vec::new(),
             cursor: 0,
         }
     }
 
-    fn append(&mut self, value: String) {
+    pub fn append(&mut self, value: String) {
         self.container.push(value);
     }
 }
