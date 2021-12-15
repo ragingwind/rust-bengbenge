@@ -2,6 +2,14 @@
 name = "bengbenge"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.56"
+license = "MIT"
+readme = "README.md"
+keywords = ["bengbenge", "utility", "router", "dns", "round-robin"]
+description = "Simple inifity array for round-robin dns, beng, beng."
+homepage = "https://github.com/ragingwind/rust-bengbenge"
+documentation = "https://github.com/ragingwind/rust-bengbenge"
+repository = "https://github.com/ragingwind/rust-bengbenge"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
