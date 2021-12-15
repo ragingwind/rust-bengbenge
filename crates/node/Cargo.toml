@@ -1,0 +1,20 @@
+[package]
+name = "node"
+version = "0.3.1"
+edition = "2018"
+rust-version = "1.56"
+build = "build.rs"
+authors = ["Jimmy Moon <ragingwind@gmail.com>"]
+license = "MIT"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[build-dependencies]
+napi-build = {version = "1"}
+
+[dependencies]
+napi = "2"
+napi-derive = "2"
+bengbenge = {path = "../bengbenge"}

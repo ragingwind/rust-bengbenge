@@ -1,19 +1,17 @@
-#![allow(dead_code)]
-
-struct BengBenge {
-    container: Vec<String>,
-    cursor: usize,
+pub struct BengBenge {
+    pub container: Vec<String>,
+    pub cursor: usize,
 }
 
 impl BengBenge {
-    fn new() -> BengBenge {
+    pub fn new() -> BengBenge {
         BengBenge {
             container: Vec::new(),
             cursor: 0,
         }
     }
 
-    fn append(&mut self, value: String) {
+    pub fn append(&mut self, value: String) {
         self.container.push(value);
     }
 }
@@ -24,7 +22,11 @@ impl Iterator for BengBenge {
     fn next(&mut self) -> Option<Self::Item> {
         match self.container.get(self.cursor) {
             Some(value) => {
-                self.cursor = if self.cursor + 1 < self.container.len() { self.cursor + 1 } else { 0 };
+                self.cursor = if self.cursor + 1 < self.container.len() {
+                    self.cursor + 1
+                } else {
+                    0
+                };
                 Some(value.to_owned())
             }
             None => None,
@@ -64,8 +66,7 @@ mod tests {
         bb.append("192.168.0.3".to_string());
         bb.append("192.168.0.4".to_string());
 
-        let mut addreses = vec!["192.168.0.1", "192.168.0.2", "192.168.0.3", "192.168.0.4"];
-        addreses.reverse();
+        let mut addreses = vec!["192.168.0.4", "192.168.0.3", "192.168.0.2", "192.168.0.1"];
 
         while let Some(address) = bb.next() {
             assert_eq!(addreses.pop().unwrap(), address);
