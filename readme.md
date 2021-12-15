@@ -5,14 +5,19 @@
 # Usese
 
 ```rust
-let mut bbe = BengBenge::new();
+use bengbenge::BengBenge;
 
-bbe.append("192.168.0.1".to_string());
-bbe.append("192.168.0.2".to_string());
-bbe.append("192.168.0.3".to_string());
-bbe.append("192.168.0.4".to_string());
+fn main() {
+    let mut bbe = BengBenge::new();
 
-let dns = bbe.next();
+    bbe.append("192.168.0.1".to_string());
+    bbe.append("192.168.0.2".to_string());
+
+    println!("{}", bbe.next().unwrap());
+    println!("{}", bbe.next().unwrap());
+    println!("{}", bbe.next().unwrap());
+    println!("{}", bbe.next().unwrap());
+}
 ```
 
 # License
