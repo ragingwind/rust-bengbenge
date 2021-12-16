@@ -1,0 +1,17 @@
+[package]
+name = "bengbenge"
+version = "0.3.1-alpha.2"
+edition = "2018"
+rust-version = "1.56"
+authors = ["Jimmy Moon <ragingwind@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["bengbenge", "utility", "router", "dns", "round-robin"]
+description = "Simple inifity array for round-robin dns, beng, beng."
+homepage = "https://github.com/ragingwind/rust-bengbenge"
+documentation = "https://github.com/ragingwind/rust-bengbenge"
+repository = "https://github.com/ragingwind/rust-bengbenge"
+categories = ["data-structures"]
+
+[lib]
+crate-type = ["cdylib", "lib"]

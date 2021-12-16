@@ -1,0 +1,50 @@
+name: before-publish
+on: [push, pull_request]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install rust
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          components: rustfmt, clippy
+
+      - name: Preparing
+        run: |
+          cargo install cargo-deny
+
+      - name: Check
+        run: |
+          cargo deny check
+          cargo fmt --all -- --check
+
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-10.15
+          - windows-latest
+        crate:
+          - bengbenge
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+
+      - name: Run cargo test
+        shell: bash
+        run: |
+          cargo test --color always -p ${{ matrix.crate }}

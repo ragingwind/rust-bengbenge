@@ -1,2 +1,9 @@
+node_modules
 target
 Cargo.lock
+*.node
+/*.cjs
+/*.d.ts
+/*.map
+native/artifacts.json
+artifacts.json
