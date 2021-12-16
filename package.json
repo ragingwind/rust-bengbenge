@@ -1,0 +1,48 @@
+{
+  "name": "bengbenge",
+  "version": "0.3.1-alpha.2",
+  "description": "> Simple inifity array for round-robin dns, beng, beng in rustlang. [Origin](https://github.com/ragingwind/node-bengbenge) is from node.",
+  "type": "module",
+  "main": "./index.cjs",
+  "exports": "./index.cjs",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "scripts": {
+    "build": "napi build --platform --release --cargo-name node --cargo-flags=\"-p node\" --js index.cjs",
+    "build:dev": "napi build --platform --cargo-name node --cargo-flags=\"-p node\" --js index.cjs",
+    "test": "npm run build:dev && node test.js",
+    "prepublishOnly": "napi prepublish -p scripts/npm --tagstyle npm",
+    "version": "napi version -p scripts/npm",
+    "artifacts": "napi artifacts --dist scripts/npm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ragingwind/rust-bengbenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ragingwind/rust-bengbenge/issues"
+  },
+  "homepage": "https://github.com/ragingwind/rust-bengbenge#readme",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.0.0"
+  },
+  "dependencies": {
+    "@node-rs/helper": "^1.2.1"
+  },
+  "napi": {
+    "name": "bengbenge",
+    "triples": {
+      "defaults": true
+    }
+  },
+  "optionalDependencies": {
+    "bengbenge-darwin-arm64": "0.3.1-alpha.2",
+    "bengbenge-darwin-x64": "0.3.1-alpha.2",
+    "bengbenge-linux-x64-gnu": "0.3.1-alpha.2",
+    "bengbenge-win32-x64-msvc": "0.3.1-alpha.2"
+  }
+}

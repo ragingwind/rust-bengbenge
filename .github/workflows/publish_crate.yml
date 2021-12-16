@@ -1,0 +1,22 @@
+name: publish-crate
+on: [workflow_dispatch]
+
+jobs:
+  publish-crate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: cargo-publish-crates
+
+      - name: Publish
+        run: |
+          cargo login ${{ secrets.CARGO_TOKEN }}
+          cargo publish -p bengbenge
