@@ -13,6 +13,11 @@ documentation = "https://github.com/ragingwind/rust-bengbenge"
 repository = "https://github.com/ragingwind/rust-bengbenge"
 categories = ["data-structures"]
 
+[lib]
+crate-type = ["cdylib"]
+
+[build-dependencies]
+napi-build = {version = "1"}
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
