@@ -2,7 +2,11 @@
 
 > Simple inifity array for round-robin dns, beng, beng in rustlang. [Origin](https://github.com/ragingwind/node-bengbenge) is from node.
 
-# Usese
+# rust
+
+## Install
+
+## Usese
 
 ```rust
 use bengbenge::BengBenge;
@@ -18,6 +22,22 @@ fn main() {
     println!("{}", bbe.next().unwrap());
     println!("{}", bbe.next().unwrap());
 }
+```
+
+# node
+
+## Install
+
+## Usese
+
+```js
+import Bengbenge from 'bengbenge';
+
+const beng = new Bengbenge();
+
+Array.from('12345').forEach(i => beng.append(`www${i}.vercel.com`));
+
+redirect(beng.next());
 ```
 
 # License
