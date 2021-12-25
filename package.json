@@ -1,6 +1,6 @@
 {
   "name": "bengbenge",
-  "version": "1.0.0",
+  "version": "2.0.0-alpha.1",
   "description": "> Simple inifity array for round-robin dns, beng, beng in rustlang. [Origin](https://github.com/ragingwind/node-bengbenge) is from node.",
   "type": "module",
   "main": "./index.cjs",
@@ -51,17 +51,17 @@
     }
   },
   "optionalDependencies": {
-    "bengbenge-win32-x64-msvc": "1.0.0",
-    "bengbenge-darwin-x64": "1.0.0",
-    "bengbenge-linux-x64-gnu": "1.0.0",
-    "bengbenge-linux-x64-musl": "1.0.0",
-    "bengbenge-freebsd-x64": "1.0.0",
-    "bengbenge-win32-ia32-msvc": "1.0.0",
-    "bengbenge-linux-arm64-gnu": "1.0.0",
-    "bengbenge-linux-arm-gnueabihf": "1.0.0",
-    "bengbenge-darwin-arm64": "1.0.0",
-    "bengbenge-android-arm64": "1.0.0",
-    "bengbenge-linux-arm64-musl": "1.0.0",
-    "bengbenge-win32-arm64-msvc": "1.0.0"
+    "bengbenge-win32-x64-msvc": "2.0.0",
+    "bengbenge-darwin-x64": "2.0.0",
+    "bengbenge-linux-x64-gnu": "2.0.0",
+    "bengbenge-linux-x64-musl": "2.0.0",
+    "bengbenge-freebsd-x64": "2.0.0",
+    "bengbenge-win32-ia32-msvc": "2.0.0",
+    "bengbenge-linux-arm64-gnu": "2.0.0",
+    "bengbenge-linux-arm-gnueabihf": "2.0.0",
+    "bengbenge-darwin-arm64": "2.0.0",
+    "bengbenge-android-arm64": "2.0.0",
+    "bengbenge-linux-arm64-musl": "2.0.0",
+    "bengbenge-win32-arm64-msvc": "2.0.0"
   }
 }

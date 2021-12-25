@@ -28,6 +28,10 @@ fn main() {
 
 ## Install
 
+```sh
+npm install bengbenge
+```
+
 ## Usese
 
 ```js
