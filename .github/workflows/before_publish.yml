@@ -2,24 +2,18 @@ name: before-publish
 on: [push, pull_request]
 
 jobs:
-  check:
+  check-deny:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Install rust
-        uses: actions-rs/toolchain@v1
+      - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          toolchain: stable
           components: rustfmt, clippy
 
-      - name: Preparing
+      - name: Check deny
         run: |
           cargo install cargo-deny
-
-      - name: Check
-        run: |
           cargo deny check
           cargo fmt --all -- --check
 
@@ -37,14 +31,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
+      - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          toolchain: stable
 
-      - name: Run cargo test
+      - name: Test
         shell: bash
         run: |
           cargo test --color always -p ${{ matrix.crate }}

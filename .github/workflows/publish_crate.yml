@@ -1,14 +1,11 @@
-name: publish-creates
+name: publish-crate
 on: [workflow_dispatch]
 
 jobs:
-  publish-crates:
-    name: Publish crates
+  publish-crate:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-
       - uses: actions/cache@v2
         with:
           path: |
@@ -19,8 +16,7 @@ jobs:
             target/
           key: cargo-publish-crates
 
-      - name: Login
-        run: cargo login ${{ secrets.CARGO_TOKEN }}
-
-      - name: Publish crates
-        run: cargo publish -p bengbenge
+      - name: Publish
+        run: |
+          cargo login ${{ secrets.CARGO_TOKEN }}
+          cargo publish -p bengbenge
