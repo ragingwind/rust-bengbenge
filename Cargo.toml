@@ -1,5 +1,5 @@
 [workspace]
-license = "MIT"
+
 members = [
   "crates/node",
   "crates/bengbenge",
