@@ -35,3 +35,12 @@ jobs:
           - windows-latest
         crate:
           - bengbenge
+     steps:
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+
+      - name: Run cargo test
+        run: |
+          cargo test --color always -p ${{ matrix.crate }}
