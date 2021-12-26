@@ -2,7 +2,7 @@ name: Precheck
 on: [push, pull_request]
 
 jobs:
-  check-license:
+  check:
     name: Pre-publish
     runs-on: ubuntu-latest
     steps:
@@ -16,11 +16,13 @@ jobs:
           components: rustfmt, clippy
 
       - name: Preparing
-        run: cargo install cargo-deny
-          cargo fmt --all -- --check
+        run: |
+          cargo install cargo-deny
 
-      - name: Check license
-        run: cargo deny check
+      - name: Check
+        run: |
+          cargo deny check
+          cargo fmt --all -- --check
   test:
     name: Test
     runs-on: ${{ matrix.os }}
