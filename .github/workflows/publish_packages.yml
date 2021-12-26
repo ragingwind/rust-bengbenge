@@ -30,22 +30,31 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     steps:
       - uses: actions/checkout@v2
+      
       - name: Setup node
         uses: actions/setup-node@v2
         with:
           node-version: 14
           checj-latest: true
+      
       - name: Install rust
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
           override: true
           target: ${{ matrix.settings.target }}
+      
       - name: Install dependencies
         run: yarn install --ignore-scripts --registry https://registry.npmjs.org --network-timeout 300000
+      
       - name: Build
         run: ${{ matrix.settings.build }}
         shell: bash
+
+      - name: List binaries
+        run: ls -R .
+        shell: bash
+      
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
