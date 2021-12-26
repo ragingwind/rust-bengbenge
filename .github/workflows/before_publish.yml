@@ -23,24 +23,3 @@ jobs:
         run: |
           cargo deny check
           cargo fmt --all -- --check
-  test:
-    name: Test
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - ubuntu-latest
-          - macos-10.15
-          - windows-latest
-        crate:
-          - bengbenge
-     steps:
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-
-      - name: Run cargo test
-        run: |
-          cargo test --color always -p ${{ matrix.crate }}
