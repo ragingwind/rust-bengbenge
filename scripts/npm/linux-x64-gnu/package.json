@@ -1,6 +1,6 @@
 {
   "name": "bengbenge-linux-x64-gnu",
-  "version": "2.0.0",
+  "version": "2.0.0-alpha.1",
   "os": [
     "linux"
   ],

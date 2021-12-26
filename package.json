@@ -36,32 +36,13 @@
   "napi": {
     "name": "bengbenge",
     "triples": {
-      "defaults": true,
-      "additional": [
-        "x86_64-unknown-linux-musl",
-        "x86_64-unknown-freebsd",
-        "i686-pc-windows-msvc",
-        "aarch64-unknown-linux-gnu",
-        "armv7-unknown-linux-gnueabihf",
-        "aarch64-apple-darwin",
-        "aarch64-linux-android",
-        "aarch64-unknown-linux-musl",
-        "aarch64-pc-windows-msvc"
-      ]
+      "defaults": true
     }
   },
   "optionalDependencies": {
-    "bengbenge-win32-x64-msvc": "2.0.0",
     "bengbenge-darwin-x64": "2.0.0",
-    "bengbenge-linux-x64-gnu": "2.0.0",
-    "bengbenge-linux-x64-musl": "2.0.0",
-    "bengbenge-freebsd-x64": "2.0.0",
-    "bengbenge-win32-ia32-msvc": "2.0.0",
-    "bengbenge-linux-arm64-gnu": "2.0.0",
-    "bengbenge-linux-arm-gnueabihf": "2.0.0",
     "bengbenge-darwin-arm64": "2.0.0",
-    "bengbenge-android-arm64": "2.0.0",
-    "bengbenge-linux-arm64-musl": "2.0.0",
+    "bengbenge-linux-x64-gnu": "2.0.0",
     "bengbenge-win32-arm64-msvc": "2.0.0"
   }
 }
