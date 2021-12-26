@@ -35,11 +35,11 @@ jobs:
           node-version: 14
           checj-latest: true
       - name: Install rust
-          uses: actions-rs/toolchain@v1
-          with:
-            profile: minimal
-            override: true
-            target: ${{ matrix.settings.target }}
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          override: true
+          target: ${{ matrix.settings.target }}
       - name: Install dependencies
         run: yarn install --ignore-scripts --registry https://registry.npmjs.org --network-timeout 300000
       - name: Build
