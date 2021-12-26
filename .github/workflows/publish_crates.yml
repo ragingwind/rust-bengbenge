@@ -21,9 +21,7 @@ jobs:
           key: cargo-publish-crates
 
       - name: Login
-        run: |
-          cargo login ${{ secrets.CARGO_TOKEN }}
+        run: cargo login ${{ secrets.CARGO_TOKEN }}
 
       - name: Publish crates
-        run: |
-          cargo publish -p bengbenge
+        run: cargo publish -p bengbenge
