@@ -1,9 +1,8 @@
-name: Precheck
+name: before-publish
 on: [push, pull_request]
 
 jobs:
   check:
-    name: Pre-publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,7 +24,6 @@ jobs:
           cargo fmt --all -- --check
 
   test:
-    name: Test
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -38,6 +36,8 @@ jobs:
           - bengbenge
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
