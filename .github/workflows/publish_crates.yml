@@ -1,5 +1,6 @@
-name: Publish
 on: workflow_dispatch
+
+name: Publish
 
 jobs:
   publish-crates:
@@ -25,4 +26,4 @@ jobs:
 
       - name: Publish crates
         run: |
-          cargo publish -p crates/bengbenge
+          cargo publish -p bengbenge
