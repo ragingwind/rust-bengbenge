@@ -1,6 +1,6 @@
 [package]
 name = "bengbenge"
-version = "0.3.1"
+version = "0.3.1-alpha.1"
 edition = "2018"
 rust-version = "1.56"
 authors = ["Jimmy Moon <ragingwind@gmail.com>"]
