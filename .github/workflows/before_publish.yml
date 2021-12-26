@@ -23,6 +23,7 @@ jobs:
         run: |
           cargo deny check
           cargo fmt --all -- --check
+
   test:
     name: Test
     runs-on: ${{ matrix.os }}
@@ -35,12 +36,14 @@ jobs:
           - windows-latest
         crate:
           - bengbenge
-     steps:
+
+    steps:
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
 
       - name: Run cargo test
+        shell: bash
         run: |
           cargo test --color always -p ${{ matrix.crate }}
