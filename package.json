@@ -5,6 +5,7 @@
   "type": "module",
   "main": "./index.cjs",
   "exports": "./index.cjs",
+  "types": "./index.d.ts",
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
@@ -22,7 +23,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ragingwind/rust-bengbenge/issues"
   },
@@ -36,13 +37,11 @@
   "napi": {
     "name": "bengbenge",
     "triples": {
-      "defaults": true
+      "defaults": true,
+      "additional": [
+        "aarch64-apple-darwin"
+      ]
     }
   },
-  "optionalDependencies": {
-    "bengbenge-darwin-arm64": "0.3.1-alpha.2",
-    "bengbenge-darwin-x64": "0.3.1-alpha.2",
-    "bengbenge-linux-x64-gnu": "0.3.1-alpha.2",
-    "bengbenge-win32-x64-msvc": "0.3.1-alpha.2"
-  }
+  "optionalDependencies": {}
 }
