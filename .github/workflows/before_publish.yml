@@ -28,7 +28,6 @@ jobs:
           - windows-latest
         crate:
           - bengbenge
-
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
