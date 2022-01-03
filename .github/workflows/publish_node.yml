@@ -50,6 +50,7 @@ jobs:
         with:
           profile: minimal
           override: true
+          target: ${{ matrix.settings.target }}
 
       - name: Generate Cargo.lock
         uses: actions-rs/cargo@v1

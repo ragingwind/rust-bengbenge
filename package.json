@@ -1,6 +1,6 @@
 {
   "name": "bengbenge",
-  "version": "0.3.3",
+  "version": "0.3.9",
   "description": "Simple inifity array for round-robin dns, beng, beng in rustlang. [Origin](https://github.com/ragingwind/node-bengbenge) is from node.",
   "type": "module",
   "main": "./index.cjs",
@@ -9,6 +9,10 @@
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
+  "files": [
+    "index.cjs",
+    "index.d.ts"
+  ],
   "scripts": {
     "build": "napi build --platform --release --cargo-name node --cargo-flags=\"-p node\" --js index.cjs",
     "build:dev": "napi build --platform --cargo-name node --cargo-flags=\"-p node\" --js index.cjs",
