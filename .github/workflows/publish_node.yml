@@ -24,7 +24,6 @@ jobs:
               export CXX=$(xcrun -f clang++);
               SYSROOT=$(xcrun --sdk macosx --show-sdk-path);
               export CFLAGS="-isysroot $SYSROOT -isystem $SYSROOT";
-              rustup target add aarch64-apple-darwin
               yarn build --target=aarch64-apple-darwin
               strip -x *.node
           - host: windows-latest

@@ -1,3 +1,3 @@
-# `bengbenge-darwin-x64`
+# `bengbenge-darwin-arm64`
 
-This is the **x86_64-apple-darwin** binary for `bengbenge`
+This is the **aarch64-apple-darwin** binary for `bengbenge`
