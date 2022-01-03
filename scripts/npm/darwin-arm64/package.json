@@ -1,41 +1,29 @@
 {
-  "name": "@swc/core-darwin-arm64",
-  "version": "1.2.46",
+  "name": "bengbenge-darwin-arm64",
+  "version": "0.3.2",
   "os": [
     "darwin"
   ],
   "cpu": [
     "arm64"
   ],
-  "main": "swc.darwin-arm64.node",
+  "main": "bengbenge.darwin-arm64.node",
   "files": [
-    "swc.darwin-arm64.node"
+    "bengbenge.darwin-arm64.node"
   ],
-  "description": "Super-fast alternative for babel",
-  "keywords": [
-    "swc",
-    "spack",
-    "babel",
-    "typescript",
-    "rust",
-    "webpack",
-    "tsc"
-  ],
-  "author": "강동윤 <kdy1997.dev@gmail.com>",
-  "homepage": "https://swc.rs",
+  "description": "> Simple inifity array for round-robin dns, beng, beng in rustlang. [Origin](https://github.com/ragingwind/node-bengbenge) is from node.",
+  "keywords": [],
+  "author": "",
+  "homepage": "https://github.com/ragingwind/rust-bengbenge#readme",
   "license": "MIT",
   "engines": {
-    "node": ">=10"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swc-project/swc.git"
+    "url": "git+https://github.com/ragingwind/rust-bengbenge.git"
   },
   "bugs": {
-    "url": "https://github.com/swc-project/swc/issues"
+    "url": "https://github.com/ragingwind/rust-bengbenge/issues"
   }
 }

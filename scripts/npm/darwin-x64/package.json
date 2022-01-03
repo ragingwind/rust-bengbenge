@@ -1,15 +1,15 @@
 {
-  "name": "bengbenge-darwin-arm64",
+  "name": "bengbenge-darwin-x64",
   "version": "0.3.2",
   "os": [
     "darwin"
   ],
   "cpu": [
-    "arm64"
+    "x64"
   ],
-  "main": "bengbenge.darwin-arm64.node",
+  "main": "bengbenge.darwin-x64.node",
   "files": [
-    "bengbenge.darwin-arm64.node"
+    "bengbenge.darwin-x64.node"
   ],
   "description": "> Simple inifity array for round-robin dns, beng, beng in rustlang. [Origin](https://github.com/ragingwind/node-bengbenge) is from node.",
   "keywords": [],
