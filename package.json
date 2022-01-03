@@ -1,6 +1,6 @@
 {
   "name": "bengbenge",
-  "version": "2.0.0-alpha.1",
+  "version": "0.3.1-alpha.2",
   "description": "> Simple inifity array for round-robin dns, beng, beng in rustlang. [Origin](https://github.com/ragingwind/node-bengbenge) is from node.",
   "type": "module",
   "main": "./index.cjs",
@@ -40,9 +40,8 @@
     }
   },
   "optionalDependencies": {
-    "bengbenge-darwin-x64": "2.0.0",
-    "bengbenge-darwin-arm64": "2.0.0",
-    "bengbenge-linux-x64-gnu": "2.0.0",
-    "bengbenge-win32-arm64-msvc": "2.0.0"
+    "bengbenge-darwin-x64": "2.0.0-alpha.1",
+    "bengbenge-linux-x64-gnu": "2.0.0-alpha.1",
+    "bengbenge-win32-x64-msvc": "2.0.0-alpha.1"
   }
 }
