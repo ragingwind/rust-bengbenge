@@ -129,6 +129,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --ignore-scripts --registry https://registry.npmjs.org --network-timeout 300000
 
+      - name: Build script
+        run: |
+          yarn build
+          strip -x *.node
+
       - name: Download all artifacts
         uses: actions/download-artifact@v2
         with:
