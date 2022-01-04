@@ -1,6 +1,6 @@
 {
   "name": "bengbenge",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "description": "Simple inifity array for round-robin dns, beng, beng in rustlang. [Origin](https://github.com/ragingwind/node-bengbenge) is from node.",
   "type": "module",
   "main": "./index.cjs",
