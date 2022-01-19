@@ -44,6 +44,10 @@ Array.from('12345').forEach(i => beng.append(`www${i}.vercel.com`));
 redirect(beng.next());
 ```
 
+# Publish
+
+
+
 # License
 
 MIT @ Jimmy Moon
